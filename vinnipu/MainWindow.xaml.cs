@@ -84,5 +84,25 @@ namespace vinnipu
             muvelet = "";
             ujErtek = false;
 		}
+
+		private void vesszo_click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void pluszminusz_click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void ce_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void back_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

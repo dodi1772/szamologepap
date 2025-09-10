@@ -5,32 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:vinnipu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="300">
+        Title="MainWindow" Height="450" Width="280">
 	<StackPanel Margin="10">
-		<TextBox x:Name="kijelzo" FontSize="20" HorizontalAlignment="Right" IsReadOnly="False" Margin="0,0,0,10" Text="0"></TextBox>
+		<TextBox x:Name="kijelzo" FontSize="30" HorizontalAlignment="Right" IsReadOnly="False" Margin="0,0,5,10" Text="0"></TextBox>
+		<WrapPanel>
+			<Button Height="50" Width="50" Margin="5" Content="%" Click="muvelet_Click"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="CE" Click="ce_Click"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="C" Click="c_Click"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="⌫" Click="back_Click"></Button>
+
+		</WrapPanel>
 		<WrapPanel>
 			<Button Height="50" Width="50" Margin="5" Content="7" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="8" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="9" Click="szam_Click"></Button>
-			<Button Height="50" Width="50" Margin="5" Content="/" Click="muvelet_Click"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="*" Click="muvelet_Click"></Button>
 		</WrapPanel>
 
 		<WrapPanel>
 			<Button Height="50" Width="50" Margin="5" Content="4" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="5" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="6" Click="szam_Click"></Button>
-			<Button Height="50" Width="50" Margin="5" Content="*" Click="muvelet_Click"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="-" Click="muvelet_Click"></Button>
 		</WrapPanel>
 		<WrapPanel>
 			<Button Height="50" Width="50" Margin="5" Content="1" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="2" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="3" Click="szam_Click"></Button>
-			<Button Height="50" Width="50" Margin="5" Content="-" Click="muvelet_Click"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="+" Click="muvelet_Click"></Button>
 		</WrapPanel>
 		<WrapPanel>
-			<Button Height="50" Width="50" Margin="5" Content="AC" Click="c_Click"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="+-" Click="pluszminusz_click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="0" Click="szam_Click"></Button>
-			<Button Height="50" Width="50" Margin="5" Content="+" Click="muvelet_Click"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="," Click="vesszo_click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="=" Click="egyenloseg_Click"></Button>
 		</WrapPanel>
 
