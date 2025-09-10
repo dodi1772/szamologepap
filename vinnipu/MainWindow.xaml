@@ -28,7 +28,7 @@
 			<Button Height="50" Width="50" Margin="5" Content="-" Click="muvelet_Click"></Button>
 		</WrapPanel>
 		<WrapPanel>
-			<Button Height="50" Width="50" Margin="5" Content="AC"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="AC" Click="c_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="0" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="+" Click="muvelet_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="=" Click="egyenloseg_Click"></Button>

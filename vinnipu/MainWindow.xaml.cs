@@ -49,7 +49,40 @@ namespace vinnipu
 
 		private void egyenloseg_Click(object sender, RoutedEventArgs e)
 		{
+            double eredmeny=0;
+            switch(muvelet)
+            {
+                case "+":
+                    eredmeny = elsoszam + double.Parse(kijelzo.Text);
+                    break;
+                case "-":
+                    eredmeny = elsoszam - double.Parse(kijelzo.Text);
+                    break;
+                case "*":
+                    eredmeny = elsoszam * double.Parse(kijelzo.Text);
+                    break;
+                case "/":
+                    if (kijelzo.Text == "0")
+                    {
+                        MessageBox.Show("Nullával való osztás nem lehetséges!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+                    else
+                    {
+						eredmeny = elsoszam / double.Parse(kijelzo.Text);
+					}
+                    break;
+            }
+            kijelzo.Text = eredmeny.ToString();
+            ujErtek = true;
+		}
 
+		private void c_Click(object sender, RoutedEventArgs e)
+		{
+            kijelzo.Text = "0";
+            elsoszam = 0;
+            muvelet = "";
+            ujErtek = false;
 		}
 	}
 }
