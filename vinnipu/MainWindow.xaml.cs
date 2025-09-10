@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Globalization;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -87,15 +88,27 @@ namespace vinnipu
 
 		private void vesszo_click(object sender, RoutedEventArgs e)
 		{
-
+			string decimalSeparator = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+			if (ujErtek)
+			{
+				kijelzo.Text = "0";
+				ujErtek = false;
+			}
+			if (!kijelzo.Text.Contains(decimalSeparator))
+			{
+				kijelzo.Text += decimalSeparator;
+			}
 		}
 
 		private void pluszminusz_click(object sender, RoutedEventArgs e)
 		{
-            if (kijelzo.Text.StartsWith("."))
-            {
-
-            }
+			if (string.IsNullOrEmpty(kijelzo.Text) || kijelzo.Text == "0") return;
+			double value;
+			if (double.TryParse(kijelzo.Text, out value))
+			{
+				value = -value;
+				kijelzo.Text = value.ToString();
+			}
 		}
 
 		private void ce_Click(object sender, RoutedEventArgs e)
