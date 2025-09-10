@@ -139,10 +139,12 @@ namespace vinnipu
 			if (e.Key >= Key.D0 && e.Key <= Key.D9)
 			{
 				keyString = (e.Key - Key.D0).ToString();
+				e.Handled = true;
 			}
 			else if (e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9)
 			{
 				keyString = (e.Key - Key.NumPad0).ToString();
+				e.Handled = true;
 			}
 			else
 			{
@@ -157,7 +159,6 @@ namespace vinnipu
 			{
 				kijelzo.Text += keyString;
 			}
-			e.Handled = true;
 			switch(e.Key)
 			{
 				case Key.Add:
