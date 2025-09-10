@@ -134,7 +134,72 @@ namespace vinnipu
 
 		private void ablakpreviewkeydown(object sender, KeyEventArgs e)
 		{
+			string keyString = "";
 
+			if (e.Key >= Key.D0 && e.Key <= Key.D9)
+			{
+				keyString = (e.Key - Key.D0).ToString();
+			}
+			else if (e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9)
+			{
+				keyString = (e.Key - Key.NumPad0).ToString();
+			}
+			else
+			{
+				return;
+			}
+			if (kijelzo.Text == "0" || ujErtek)
+			{
+				kijelzo.Text = keyString;
+				ujErtek = false;
+			}
+			else
+			{
+				kijelzo.Text += keyString;
+			}
+			e.Handled = true;
+			switch(e.Key)
+			{
+				case Key.Add:
+					muvelet_Click(new Button() { Content = "+" }, new RoutedEventArgs());
+					e.Handled = true;
+					break;
+				case Key.Subtract:
+					muvelet_Click(new Button() { Content = "-" }, new RoutedEventArgs());
+					e.Handled = true;
+					break;
+					case Key.Multiply:
+					muvelet_Click(new Button() { Content = "*" }, new RoutedEventArgs());
+					e.Handled = true;
+					break;
+				case Key.Divide:
+					muvelet_Click(new Button() { Content = "/" }, new RoutedEventArgs());
+					e.Handled = true;
+					break;
+				case Key.Enter:
+					egyenloseg_Click(this, new RoutedEventArgs());
+					e.Handled = true;
+					break;
+				case Key.Back:
+					back_Click(this, new RoutedEventArgs());
+					e.Handled = true;
+					break;
+				case Key.Delete:
+					ce_Click(this, new RoutedEventArgs());
+					e.Handled = true;
+					break;
+				case Key.Escape:
+					c_Click(this, new RoutedEventArgs());
+					e.Handled = true;
+					break;
+				case Key.Decimal:
+				case Key.OemComma:
+				case Key.OemPeriod:
+					vesszo_click(this, new RoutedEventArgs());
+					e.Handled = true;
+					break;
+			}
 		}
+
 	}
 }
