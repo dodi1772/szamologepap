@@ -92,17 +92,31 @@ namespace vinnipu
 
 		private void pluszminusz_click(object sender, RoutedEventArgs e)
 		{
+            if (kijelzo.Text.StartsWith("."))
+            {
 
+            }
 		}
 
 		private void ce_Click(object sender, RoutedEventArgs e)
 		{
-
+			kijelzo.Text = "0";
+			elsoszam = 0;
+			muvelet = "";
+			ujErtek = false;
 		}
 
 		private void back_Click(object sender, RoutedEventArgs e)
 		{
-
+            if (ujErtek) return;
+            if (kijelzo.Text.Length > 1)
+            {
+                kijelzo.Text = kijelzo.Text.Remove(kijelzo.Text.Length - 1);
+			}
+            else
+            {
+                kijelzo.Text = "0";
+			}
 		}
 	}
 }
