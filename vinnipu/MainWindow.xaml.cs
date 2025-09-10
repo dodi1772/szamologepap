@@ -38,5 +38,18 @@ namespace vinnipu
                 kijelzo.Text += szam;
             }
 		}
+
+		private void muvelet_Click(object sender, RoutedEventArgs e)
+		{
+            var gomb= (Button)sender;
+            elsoszam = double.Parse(kijelzo.Text);
+            muvelet= gomb.Content.ToString();
+            ujErtek= true;
+		}
+
+		private void egyenloseg_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

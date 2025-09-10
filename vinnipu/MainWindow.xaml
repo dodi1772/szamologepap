@@ -12,26 +12,26 @@
 			<Button Height="50" Width="50" Margin="5" Content="7" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="8" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="9" Click="szam_Click"></Button>
-			<Button Height="50" Width="50" Margin="5" Content="/"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="/" Click="muvelet_Click"></Button>
 		</WrapPanel>
 
 		<WrapPanel>
 			<Button Height="50" Width="50" Margin="5" Content="4" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="5" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="6" Click="szam_Click"></Button>
-			<Button Height="50" Width="50" Margin="5" Content="*"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="*" Click="muvelet_Click"></Button>
 		</WrapPanel>
 		<WrapPanel>
 			<Button Height="50" Width="50" Margin="5" Content="1" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="2" Click="szam_Click"></Button>
 			<Button Height="50" Width="50" Margin="5" Content="3" Click="szam_Click"></Button>
-			<Button Height="50" Width="50" Margin="5" Content="-"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="-" Click="muvelet_Click"></Button>
 		</WrapPanel>
 		<WrapPanel>
 			<Button Height="50" Width="50" Margin="5" Content="AC"></Button>
-			<Button Height="50" Width="50" Margin="5" Content="0"></Button>
-			<Button Height="50" Width="50" Margin="5" Content="+"></Button>
-			<Button Height="50" Width="50" Margin="5" Content="="></Button>
+			<Button Height="50" Width="50" Margin="5" Content="0" Click="szam_Click"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="+" Click="muvelet_Click"></Button>
+			<Button Height="50" Width="50" Margin="5" Content="=" Click="egyenloseg_Click"></Button>
 		</WrapPanel>
 
 	</StackPanel>
