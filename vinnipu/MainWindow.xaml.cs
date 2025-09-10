@@ -131,5 +131,10 @@ namespace vinnipu
                 kijelzo.Text = "0";
 			}
 		}
+
+		private void ablakpreviewkeydown(object sender, KeyEventArgs e)
+		{
+
+		}
 	}
 }
